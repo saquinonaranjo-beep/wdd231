@@ -19,7 +19,7 @@ header span {
 }
 
 .hamburger {
-    background-color:none;
+    background-color:transparent;
     border:none;
     color:black;
     cursor: pointer;
