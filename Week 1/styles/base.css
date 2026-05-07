@@ -18,14 +18,14 @@ header span {
     color:#3d405b;
 }
 
-.hambuerger {
+.hamburger {
     background-color: none ;
     border:none;
     color:black;
     cursor: pointer;
 }
 
-.hambuerger::after{
+.hamburger::after{
     content:"\2630";
-    font-size: size 2rem;
+    font-size: 2rem;
 }
