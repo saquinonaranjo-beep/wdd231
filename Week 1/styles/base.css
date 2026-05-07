@@ -25,7 +25,20 @@ header span {
     cursor: pointer;
 }
 
-.hamburger::after{
+.hamburger::before {
     content:"\2630";
     font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content:"\00D7";
+    font-size: 2rem;
+}
+.navigation {
+    display: none;
+  }
+
+
+.navigation.show {
+  display: block;
 }
