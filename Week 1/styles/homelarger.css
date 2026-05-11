@@ -1,24 +1,39 @@
-/* styles/larger.css */
+/* =========================
+   larger.css
+   ========================= */
 
 @media (min-width: 768px) {
-  #menuButton {
-    display: none;
-  }
 
-  nav {
-    display: block;
-  }
+    /* hide hamburger */
+    #menuButton {
+        display: none;
+    }
 
-  nav ul {
-    display: flex;
-    gap: 2rem;
-  }
+    /* show horizontal nav */
+    nav {
+        display: block;
+    }
 
-  nav li {
-    margin: 0;
-  }
+    nav ul {
+        display: flex;
+    }
 
-  #course-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+    }
+
+    /* top section desktop layout */
+    .top-sections {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    /* course cards 3 columns */
+    #course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
