@@ -1,0 +1,24 @@
+/* styles/larger.css */
+
+@media (min-width: 768px) {
+  #menuButton {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  #course-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
