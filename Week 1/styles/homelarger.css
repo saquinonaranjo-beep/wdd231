@@ -1,15 +1,11 @@
-/* =========================
-   larger.css
-   ========================= */
+/* homelarger.css */
 
 @media (min-width: 768px) {
 
-    /* hide hamburger */
     #menuButton {
         display: none;
     }
 
-    /* show horizontal nav */
     nav {
         display: block;
     }
@@ -26,14 +22,17 @@
         padding: 1rem 2rem;
     }
 
-    /* top section desktop layout */
     .top-sections {
         grid-template-columns: 2fr 1fr;
         align-items: start;
     }
 
-    /* course cards 3 columns */
     #course-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-container img {
+        width: 250px;
+        height: 300px;
     }
 }

@@ -1,99 +1,118 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="WDD 231 Course Home Page">
-  <meta name="author" content="Your Name">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="WDD 231 Course Home Page">
+    <meta name="author" content="Sergio Aquino Naranjo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WDD 231 - Home</title>
+    <title>WDD 231 - Home</title>
 
- 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/homesmall.css">
-  <link rel="stylesheet" href="styles/homelarger.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/homesmall.css">
+    <link rel="stylesheet" href="styles/homelarger.css">
 
-  <script src="scripts/navigationhome.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/course.js" defer></script>
+    <!-- JavaScript -->
+    <script src="scripts/navigationhome.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
 
+    <!-- HEADER -->
+    <header>
+        <div class="logo-name">
+            <img src="images/logo.svg" alt="Site Logo">
+            <span>Sergio Aquino Naranjo</span>
+        </div>
 
-  <header>
-    <div class="logo-name">
-      <img src="images/logo.svg" alt="Site Logo" width="60">
-      <span>Sergio Aquino Naranjo</span>
-    </div>
+        <button id="menuButton">☰</button>
+    </header>
 
-    <button id="menuButton">☰</button>
-  </header>
+    <!-- NAVIGATION -->
+    <nav id="navMenu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="final/index.html">Final Project</a></li>
+        </ul>
+    </nav>
 
+    <!-- MAIN -->
+    <main>
 
-  <nav id="navMenu">
-    <ul>
-      <li><a href="home.html" class="active">Home</a></li>
-      <li><a href="chamber/index.html">Chamber</a></li>
-      <li><a href="final/index.html">Final</a></li>
-    </ul>
-  </nav>
+        <h1>Home</h1>
 
-  
-  <main>
-    <h1>Home</h1>
+        <div class="top-sections">
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Welcome to my WDD 231 course home page. This page will contain my
-        assignments and projects during the semester.
-      </p>
-    </section>
+            <!-- ABOUT ME -->
+            <section class="card">
+                <h2>About Me</h2>
 
-    <section>
-      <h2>Course Work</h2>
-      <p>
-        This section will show my assignments and course activities.
-      </p>
-    </section>
+                <div class="card-content">
+                    <p>
+                        Welcome to my WDD 231 course home page.
+                        This page contains my assignments, projects,
+                        and course activities during the semester.
+                    </p>
+                </div>
+            </section>
 
-    <section>
-      <h2>Web Certificate Courses</h2>
+            <!-- STUDENT PHOTO -->
+            <section class="card">
+                <h2>Student Photo</h2>
 
-      <div class="buttons">
-        <button id="allBtn">All Courses</button>
-        <button id="wddBtn">WDD Courses</button>
-        <button id="cseBtn">CSE Courses</button>
-      </div>
+                <div class="photo-container">
+                    <img src="images/myphoto.jpg" alt="Sergio Aquino Naranjo Photo">
+                </div>
+            </section>
 
-      <div id="course-container"></div>
+        </div>
 
-      <p>Total Credits: <span id="totalCredits"></span></p>
-    </section>
-  </main>
+        <!-- COURSES -->
+        <section class="card course-section">
+            <h2>Web Certificate Courses</h2>
 
+            <div class="course-buttons">
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
+            </div>
 
-  <footer>
-    <div class="social">
-      <a href="https://github.com/saquinonaranjo-beep" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/sergio-aquino-naranjo-97b909342" target="_blank">LinkedIn</a>
-      <a href="https://www.facebook.com/share/1EWjFDSqzx/" target="_blank">Facebook</a>
-    </div>
+            <div id="course-container"></div>
 
-    <div>
-      <p>
-        &copy; <span id="currentyear"></span> Sergio Aquino Naranjo | Mexico City, Mexico
-      </p>
-    </div>
+            <p class="total-credits">
+                The total credits for courses listed above is
+                <span id="totalCredits"></span>
+            </p>
+        </section>
 
-    <div>
-      <p id="lastModified"></p>
-    </div>
-  </footer>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="social">
+            <a href="https://github.com/saquinonaranjo-beep" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sergio-aquino-naranjo-97b909342" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/share/1EWjFDSqzx/" target="_blank">Facebook</a>
+        </div>
+
+        <div class="footer-info">
+            <p>
+                &copy; <span id="currentyear"></span>
+                Sergio Aquino Naranjo | Mexico City, Mexico
+            </p>
+
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
 
 </body>
 </html>

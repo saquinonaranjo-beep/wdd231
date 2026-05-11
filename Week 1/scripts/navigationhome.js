@@ -1,8 +1,8 @@
-// scripts/navigation.js
+/* navigationhome.js */
 
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("navMenu");
 
 menuButton.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
+    navMenu.classList.toggle("open");
 });
