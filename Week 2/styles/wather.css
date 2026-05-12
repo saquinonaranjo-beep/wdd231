@@ -1,0 +1,63 @@
+/* weather.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb;
+  color: #222;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #0b4f8a;
+  font-size: 2rem;
+}
+
+main {
+  background: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+#current-temp {
+  font-weight: bold;
+  color: #d35400;
+  font-size: 1.4rem;
+}
+
+figure {
+  margin-top: 1rem;
+}
+
+#weather-icon {
+  width: 100px;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: #555;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #666;
+}
