@@ -1,5 +1,3 @@
-// scripts/course.js
-
 const courses = [
   {
     code: "WDD 130",

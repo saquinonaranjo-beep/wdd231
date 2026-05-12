@@ -1,5 +1,3 @@
-/* navigationhome.js */
-
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("navMenu");
 

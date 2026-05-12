@@ -1,5 +1,3 @@
-// scripts/date.js
-
 document.getElementById("currentyear").textContent =
   new Date().getFullYear();
 
