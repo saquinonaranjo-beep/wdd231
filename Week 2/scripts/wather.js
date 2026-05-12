@@ -19,13 +19,17 @@ async function apiFetch() {
     if (response.ok) {
       const data = await response.json();
       console.log(data); // testing only
-      // displayResults(data); // uncomment when ready
+      displayResults(data); // uncomment when ready
     } else {
         throw Error(await response.text());
     }
   } catch (error) {
       console.log(error);
   }
+}
+
+displayResults(data) {
+  console.log("Hello, World!"); // testing only
 }
 
 apiFetch();
