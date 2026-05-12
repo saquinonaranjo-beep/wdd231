@@ -29,7 +29,7 @@ async function apiFetch() {
 }
 
 displayResults(data) {
-  console.log("Hello, World!"); // testing only
+  console.log('Hello'); // testing only
 }
 
 apiFetch();
