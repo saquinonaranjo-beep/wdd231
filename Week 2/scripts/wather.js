@@ -28,7 +28,7 @@ async function apiFetch() {
   }
 }
 
-displayResults(data) {
+function displayResults(data) {
   console.log('Hello'); // testing only
 }
 
