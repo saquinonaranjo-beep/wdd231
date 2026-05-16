@@ -14,7 +14,7 @@ async function getMembers() {
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p>${member.website}</p>
+            <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
             <img src="${member.image}" alt="${member.name}">
         `;
         container.appendChild(card);
