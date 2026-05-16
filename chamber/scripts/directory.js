@@ -42,8 +42,14 @@ getMembers();
 
 gridButton.addEventListener("click", () => {
     console.log("Grid clicked");
+    container.classList.remove("list-view");
+    container.classList.add("grid-view");
 });
 
 listButton.addEventListener("click", () => {
     console.log("List clicked");
+    container.classList.remove("grid-view");
+    container.classList.add("list-view");
 });
+
+

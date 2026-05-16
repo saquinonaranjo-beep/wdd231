@@ -22,3 +22,13 @@
     transform: scale(1.02);
     transition: 0.3s;
 }
+
+.list-view .member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-view .member-card img {
+    width: 150px;
+}
