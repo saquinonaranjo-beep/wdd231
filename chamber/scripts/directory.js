@@ -1,3 +1,7 @@
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector(".navigation");
+const lastModified = document.querySelector("#lastModified");
+const year = document.querySelector("#currentyear");
 const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
 
@@ -52,4 +56,10 @@ listButton.addEventListener("click", () => {
     container.classList.add("list-view");
 });
 
+year.textContent = new Date().getFullYear();
 
+lastModified.textContent = `Last Modified: ${document.lastModified}`;
+
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+});

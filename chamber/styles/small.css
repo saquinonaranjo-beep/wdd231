@@ -32,3 +32,11 @@
 .list-view .member-card img {
     width: 150px;
 }
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}

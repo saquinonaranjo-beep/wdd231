@@ -4,5 +4,13 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+        #menu-button {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
 }
 
