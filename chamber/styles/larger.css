@@ -1,5 +1,6 @@
 @media screen and (min-width: 768px) {
 
+  
 
     #menu-button {
         display: none;
@@ -16,13 +17,12 @@
         margin-bottom: 0;
     }
 
-  
 
     .grid-view {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    
+
 
     .list-view .member-card {
         flex-direction: row;
