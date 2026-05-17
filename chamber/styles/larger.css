@@ -1,16 +1,44 @@
 @media screen and (min-width: 768px) {
 
-    #members-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-        #menu-button {
+    #menu-button {
         display: none;
     }
 
     .navigation {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    .navigation li {
+        margin-bottom: 0;
+    }
+
+  
+
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+
+    .list-view .member-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .list-view .member-card img {
+        width: 250px;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
-

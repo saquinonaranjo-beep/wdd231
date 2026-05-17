@@ -1,42 +1,69 @@
-#members-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
     padding: 1rem;
 }
 
-.member-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+
+
+header {
+    background-color: #003049;
+    color: white;
     padding: 1rem;
-    background-color: white;
 }
 
-.member-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.member-card:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
-}
-
-.list-view .member-card {
+.logo {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.list-view .member-card img {
-    width: 150px;
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 .navigation {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
     display: none;
 }
 
 .navigation.open {
     display: block;
+}
+
+.navigation li {
+    margin-bottom: 1rem;
 }
