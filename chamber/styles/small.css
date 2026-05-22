@@ -225,3 +225,26 @@ footer {
 .footer-dev p {
     margin-bottom: 0.5rem;
 }
+
+.weather-current-card {
+    text-align: center;
+    background: #fdfdfd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.weather-current-card .main-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003049;
+}
+.forecast-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #ddd;
+}
+.tagline {
+    color: #d62828;
+    font-weight: bold;
+}
