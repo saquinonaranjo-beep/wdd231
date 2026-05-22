@@ -1,5 +1,24 @@
 @media screen and (min-width: 768px) {
+/* --- Home Page Desktop Grid Layout Shift --- */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left column is double width */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.events-box {
+    grid-column: 1 / 2;
+}
+
+.weather-box {
+    grid-column: 2 / 3;
+}
+
+.spotlights-box {
+    grid-column: 1 / 3; /* Spans across both columns on the bottom */
+}
   
 
     #menu-button {

@@ -1,3 +1,33 @@
+/* --- Home Page Specific Mobile Styles --- */
+.Hero {
+    background: linear-gradient(rgba(0, 48, 73, 0.7), rgba(0, 48, 73, 0.7)), 
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200') no-repeat center center/cover;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+}
+
+.Hero h2 {
+    color: #fcbf49;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.Hero a {
+    display: inline-block;
+    background-color: #d62828;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Veracruz Chamber of Commerce</h1>
+            <img src="https://saquinonaranjo-beep.github.io/wdd231/chamber/images/logov.png" alt="Chamber of Commerce Logo">
+        </div>
+        <nav>
+            <button id="menu-button">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <section class="Hero">
+        <h2>Welcome to the Chamber of Commerce</h2>
+        <a href="join.html">Become a Member</a>
+    </section> 
+    <main>
+        <section class="events-box">
+            <h3>Upcoming Events</h3>
+            <p>Add a fake or real community event here directly in HTML</p>
+        </section>
+        <section class="weather-box">
+            <h3>Weather</h3>
+            <div id="current-weather"></div>
+            
+            <h4>3-Day Forecast</h4>
+            <div id="weather-forecast"></div>
+        
+        </section>
+        
+        <section class="spotlights-box">
+            <h3>BusinessSpotlights</h3>
+            <div id="spotlights-container"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>Veracruz Chamber of Commerce</p>
+            <p>123 Business Street, Veracruz, Mexico</p>
+            <p>Email: info@veracruzchamber.com</p>
+            <p>Phone: +52 229 000 0000</p>
+        </div>
+
+        <div class="footer-dev">
+            <p>&copy; <span id="currentyear"></span> Sergio Aquino Naranjo | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
