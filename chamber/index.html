@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Veracruz Chamber of Commerce - Home</title>
+    <meta name="description" content="Official homepage of the Veracruz Chamber of Commerce. Connecting local businesses, premium gold and silver members, and driving economic growth in Veracruz.">
+    <meta name="author" content="Sergio Aquino Naranjo">
+
+    <meta property="og:title" content="Veracruz Chamber of Commerce - Home">
+    <meta property="og:description" content="Explore local business directories, real-time Veracruz weather forecasts, and networking opportunities.">
+    <meta property="og:image" content="https://saquinonaranjo-beep.github.io/wdd231/chamber/images/logov.png">
+    <meta property="og:url" content="https://saquinonaranjo-beep.github.io/wdd231/chamber/index.html">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logov.png" type="image/png">
-    
     
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="https://saquinonaranjo-beep.github.io/wdd231/chamber/images/logov.png" alt="Chamber of Commerce Logo">
-            <h1>Veracruz Chamber of Commerce</h1>
+            <span>Veracruz Chamber of Commerce</span>
         </div>
         <nav>
             <button id="menu-button">☰</button>
@@ -29,29 +39,34 @@
             </ul>  
         </nav>
     </header>
+
     <section class="Hero">
         <h2>Welcome to the Chamber of Commerce</h2>
         <a href="join.html">Become a Member</a>
     </section> 
-    <main>
-        <section class="home-main">
+
+    <main class="home-main">
+        <h1 class="page-title">Veracruz Chamber of Commerce</h1>
+
+        <section class="events-box">
             <h3>Upcoming Events</h3>
-            <p>Add a fake or real community event here directly in HTML</p>
+            <p>Annual Veracruz Business Expo - Coming this July!</p>
         </section>
+
         <section class="weather-box">
             <h3>Weather</h3>
             <div id="current-weather"></div>
             
             <h4>3-Day Forecast</h4>
             <div id="weather-forecast"></div>
-        
         </section>
         
         <section class="spotlights-box">
-            <h3>BusinessSpotlights</h3>
+            <h3>Business Spotlights</h3>
             <div id="spotlights-container"></div>
         </section>
     </main>
+
     <footer>
         <div class="footer-info">
             <p>Veracruz Chamber of Commerce</p>
@@ -65,6 +80,5 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script src="scripts/index.js"></script>
 </body>
 </html>
