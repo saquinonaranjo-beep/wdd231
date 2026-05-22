@@ -91,7 +91,7 @@ async function getSpotlights() {
         const members = await response.json();
 
 
-        const premiumMembers = members.filter(m => m.membership === "Gold" || m.membership === "Silver");
+        const premiumMembers = members.filter(m => m.membership === "gold" || m.membership === "silver");
 
         // Step 2: Shuffle array order completely randomly
         const randomized = premiumMembers.sort(() => 0.5 - Math.random());
