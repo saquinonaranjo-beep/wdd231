@@ -27,3 +27,8 @@ function displayItems(data) {
 
 displayItems(temples);
 
+function showStuff(x){
+    mytitle.textContent = x.name;
+    mydialog.showHere()
+    mydialog.showModal()
+}
