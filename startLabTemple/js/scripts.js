@@ -3,13 +3,13 @@ import { temples, url } from '../data/temples.js';
 console.log(temples);
 console.log(url);
 
-/* Select elements */
+/* Select HTML elements */
 const showHere = document.querySelector("#showHere");
 
 const mydialog = document.querySelector("#mydialog");
 const mytitle = document.querySelector("#mytitle");
 const myinfo = document.querySelector("#mydialog p");
-const myclose = document.querySelector(".close-btn");
+const myclose = document.querySelector("#mydialog button");
 
 /* Close dialog */
 myclose.addEventListener("click", () => {
@@ -32,7 +32,7 @@ function displayItems(data) {
         photo.alt = x.name;
         photo.loading = "lazy";
 
-        /* Open modal when clicked */
+        /* Open modal when image is clicked */
         photo.addEventListener("click", () => {
             showStuff(x);
         });
@@ -47,10 +47,9 @@ function showStuff(x) {
 
     mytitle.textContent = x.name;
 
-    /* Optional information */
-    myinfo.textContent = `Location: ${x.location}`;
+    myinfo.textContent =
+    `Dedicated: ${x.dedicated} | By: ${x.person}`;
 
-    /* Open dialog */
     mydialog.showModal();
 }
 
