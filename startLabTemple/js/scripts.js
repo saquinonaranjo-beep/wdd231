@@ -1,58 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+import { temples, url } from '../data/temples.js';
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web Lab Start File">
-  <meta name="author" content="Paul Cheney">
+console.log(temples);
+console.log(url);
 
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+/* Select elements */
+const showHere = document.querySelector("#showHere");
 
-  <title>Temple Gallery</title>
-</head>
+const mydialog = document.querySelector("#mydialog");
+const mytitle = document.querySelector("#mytitle");
+const myinfo = document.querySelector("#mydialog p");
+const myclose = document.querySelector(".close-btn");
 
-<body>
+/* Close dialog */
+myclose.addEventListener("click", () => {
+    mydialog.close();
+});
 
-  <header>
-    <span>Temple Gallery</span>
-  </header>
+/* Display temple images */
+function displayItems(data) {
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Temples</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+    console.log(data);
 
-  <main>
+    data.forEach(x => {
 
-    <h1>Temple Gallery</h1>
+        console.log(x);
 
-    <!-- Images appear here -->
-    <div id="showHere"></div>
+        /* Create image */
+        const photo = document.createElement("img");
 
-    <!-- Dialog Modal -->
-    <dialog id="mydialog">
+        photo.src = `${url}${x.path}`;
+        photo.alt = x.name;
+        photo.loading = "lazy";
 
-      <div class="dialog-top">
-        <h2 id="mytitle">Temple Title</h2>
-        <button class="close-btn">X</button>
-      </div>
+        /* Open modal when clicked */
+        photo.addEventListener("click", () => {
+            showStuff(x);
+        });
 
-      <p></p>
+        /* Add image to page */
+        showHere.appendChild(photo);
+    });
+}
 
-    </dialog>
+/* Show modal content */
+function showStuff(x) {
 
-  </main>
+    mytitle.textContent = x.name;
 
-  <footer>
-    <p>&copy; Web Labs</p>
-  </footer>
+    /* Optional information */
+    myinfo.textContent = `Location: ${x.location}`;
 
-  <script src="js/scripts.js" type="module"></script>
+    /* Open dialog */
+    mydialog.showModal();
+}
 
-</body>
-</html>
+/* Run function */
+displayItems(temples);
