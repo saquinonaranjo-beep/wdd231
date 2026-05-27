@@ -7,7 +7,7 @@ if (timestamp) {
 
 
 menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("active");
+    navigation.classList.toggle("open");
 });
 
 const modalLinks = document.querySelectorAll("[data-modal]");
