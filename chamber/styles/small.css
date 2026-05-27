@@ -311,7 +311,7 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-80px);
 
     animation: fadeUp 0.8s ease forwards;
 }
@@ -349,6 +349,11 @@ footer {
     text-decoration: underline;
 }
 @keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
 
     to {
         opacity: 1;
