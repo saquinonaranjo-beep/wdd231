@@ -1,10 +1,14 @@
 const timestamp = document.querySelector("#timestamp");
-
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector(".navigation");
 if (timestamp) {
     timestamp.value = new Date().toISOString();
 }
 
 
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("active");
+});
 
 const modalLinks = document.querySelectorAll("[data-modal]");
 
