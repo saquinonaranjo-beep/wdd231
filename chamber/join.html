@@ -28,7 +28,7 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
-
+ 
 
 
     <link rel="stylesheet" href="styles/normalize.css">
@@ -77,20 +77,109 @@
                         name="first"
                         required
                         title="Enter your first name"
-                        autocomplete="given-name"
-                    >
+                        autocomplete="given-name">
                 </label>
 
+                <label>
+                    Last Name:
+                    <input
+                        type="text"
+                        name="last"
+                        required
+                        title="Enter your last name"
+                        autocomplete="family-name">
+
+                </label>
+
+                <label>
+                    Organization Title:
+                    <input
+                        type="text"
+                        name="organizationTitle"
+                        title="Only letters, spaces and hyphens allowed"
+                        autocomplete="organization-title"
+                        pattern="[A-Za-z-]{7,}">    
+
+                </label>
+
+                <label>
+                    Email:
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        title="Enter your email address"
+                        autocomplete="email"
+                        placeholder="example@email.com">
+                </label>
+
+                <label>
+                    Mobile Phone:
+                    <input
+                        type="tel"
+                        name="phone"
+                        required
+                        title="Enter your phone number"
+                        autocomplete="tel">
+                </label>
+
+                <label>
+                    Business Name:
+                    <input
+                        type="text"
+                        name="organization"
+                        required
+                        title="Enter your organization name"
+                        autocomplete="organization">
+                </label>
+                
+                <label>
+                    Membership Level:
+                    <select 
+                        name="membership" 
+                        required>
+                        <option value="">Select Membership</option>
+                        <option 
+                            value="np">
+                            NP Membership
+                        </option>
+                        <option 
+                            value="bronze">
+                            Bronze Membership
+                        </option>
+                        <option 
+                            value="silver">
+                            Silver Membership
+                        </option>
+                        <option 
+                            value="gold">
+                            Gold Membership
+                        </option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description
+                    <textarea
+                        name="description"
+                        title="Describe your organization">
+                    </textarea>
+                </label>
+
+                <input
+                    type="hidden"
+                    name="timestamp"
+                    id="timestamp">
+
+                <input
+                    type="submit"
+                    value="Apply for Membership">
             </form>
-
         </section>
-
-        <aside class="membership-section">
+        <aside class="membership-section">  
 
         </aside>
-
     </div>
-
     </main>
 
 
