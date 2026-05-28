@@ -311,9 +311,8 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
     opacity: 0;
-    transform: translateY(-80px);
 
-    animation: fadeUp 5.0s ease forwards;
+    animation: fadeUp 2s ease forwards;
 }
 
 .membership-card:nth-child(2) {
@@ -352,12 +351,12 @@ footer {
 
     from {
         opacity: 0;
-        transform: translateY(-80px);
+        transform: translateX(-150px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
 }
