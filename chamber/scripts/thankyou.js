@@ -17,3 +17,16 @@ document.querySelector("#organization").textContent =
 
 document.querySelector("#timestampDisplay").textContent =
     params.get("timestamp");
+
+
+const timestamp = document.querySelector("#timestamp");
+const menuButton = document.querySelector("#menu-button");
+const navigation = document.querySelector(".navigation");
+if (timestamp) {
+    timestamp.value = new Date().toISOString();
+}
+
+
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+});
