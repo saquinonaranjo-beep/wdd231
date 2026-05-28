@@ -313,7 +313,7 @@ footer {
     opacity: 0;
     transform: translateY(-80px);
 
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 5.0s ease forwards;
 }
 
 .membership-card:nth-child(2) {
