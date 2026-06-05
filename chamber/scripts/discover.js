@@ -1,5 +1,5 @@
 // src/scripts/discover.js
-import { places } from '../data/placesData.mjs';
+import { places } from '../data/places.mjs';
 
 document.addEventListener("DOMContentLoaded", () => {
 
