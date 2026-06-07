@@ -398,12 +398,6 @@ dialog::backdrop {
 
 /* Discover Page */
 
-.places-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
 .place-card {
     background-color: white;
     padding: 1rem;
@@ -463,6 +457,7 @@ dialog::backdrop {
 
 .places-container {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
 
     grid-template-areas:
