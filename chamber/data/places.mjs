@@ -2,7 +2,7 @@
 export const places = [
   {
     "name": "Aquarium del Puerto de Veracruz",
-    "image": "images/aquarium.webp",
+    "image": "images/",
     "address": "Blvd. Manuel Ávila Camacho s/n, Ricardo Flores Magón, Veracruz, Mexico",
     "description": "One of the largest aquariums in Latin America, featuring marine life from the Gulf of Mexico and beyond.",
     "link": "https://www.aquariumpuertodeveracruz.mx/"
