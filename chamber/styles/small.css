@@ -394,3 +394,11 @@ dialog::backdrop {
     border-radius: 10px;
     box-shadow: 0 2px 
 }
+
+
+/* Discover Page */
+.thankyou-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
