@@ -397,8 +397,81 @@ dialog::backdrop {
 
 
 /* Discover Page */
-.thankyou-card {
+
+.places-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.place-card {
     background-color: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.place-card h2 {
+    margin-bottom: 1rem;
+}
+
+.place-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.place-card address {
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.place-card p {
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    background-color: #003049;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #d62828;
+}
+
+#visit-message {
+    background-color: white;
+    padding: 1rem;
+    border-left: 5px solid #003049;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.card-1 { grid-area: card1; }
+.card-2 { grid-area: card2; }
+.card-3 { grid-area: card3; }
+.card-4 { grid-area: card4; }
+.card-5 { grid-area: card5; }
+.card-6 { grid-area: card6; }
+.card-7 { grid-area: card7; }
+.card-8 { grid-area: card8; }
+
+.places-container {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
 }

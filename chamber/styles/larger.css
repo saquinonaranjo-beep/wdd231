@@ -95,24 +95,37 @@
 
 
     .places-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        }
 
-        grid-template-areas:
-            "card1 card2"
-            "card3 card4"
-            "card5 card6"
-            "card7 card8";
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .place-card h2 {
+        grid-column: 1 / -1;
     }
 
     .place-card img:hover {
         transform: scale(1.05);
-        transition: 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+    .places-container {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
     }
 
 }
 
 @media screen and (min-width: 1025px) {
-
     .places-container {
         grid-template-columns: repeat(4, 1fr);
 
