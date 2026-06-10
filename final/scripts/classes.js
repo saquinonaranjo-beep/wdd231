@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Local Storage Requirement
+
     const visitMessageElement = document.getElementById('visit-message');
 
     const lastVisit = localStorage.getItem('lastGymVisit');
