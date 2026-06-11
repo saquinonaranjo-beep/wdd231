@@ -1,4 +1,4 @@
-export { routines } from '../data/routines.mjs';
+import { routines } from '../data/routines.mjs';
 
 document.addEventListener("DOMContentLoaded", () => {
 
