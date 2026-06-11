@@ -1,4 +1,4 @@
-export const programs = [
+export const routines = [
   {
     name: "Push Day",
     image: "./images/pushday.webp",
