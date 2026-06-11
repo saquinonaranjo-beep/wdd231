@@ -5,7 +5,8 @@ export const routines = [
     muscleGroup: "Chest, Shoulders, Triceps",
     difficulty: "Intermediate",
     description: "A workout focused on pressing movements to build upper body strength and muscle.",
-    duration: "60 Minutes"
+    duration: "60 Minutes",
+    link: "#"
   },
   {
     name: "Pull Day",
@@ -13,7 +14,8 @@ export const routines = [
     muscleGroup: "Back and Biceps",
     difficulty: "Intermediate",
     description: "Develop pulling strength through rows, pull-downs, and bicep exercises.",
-    duration: "60 Minutes"
+    duration: "60 Minutes",
+    link: "#"
   },
   {
     name: "Leg Day",
@@ -21,7 +23,8 @@ export const routines = [
     muscleGroup: "Quadriceps, Hamstrings, Glutes",
     difficulty: "Intermediate",
     description: "A complete lower-body workout centered around squats and compound movements.",
-    duration: "75 Minutes"
+    duration: "75 Minutes",
+    link: "#"
   },
   {
     name: "Chest Builder",
@@ -29,7 +32,8 @@ export const routines = [
     muscleGroup: "Chest",
     difficulty: "Beginner",
     description: "Improve chest size and strength using presses, flyes, and isolation work.",
-    duration: "50 Minutes"
+    duration: "50 Minutes",
+    link: "#"
   },
   {
     name: "Back Builder",
@@ -37,7 +41,8 @@ export const routines = [
     muscleGroup: "Back",
     difficulty: "Beginner",
     description: "Focus on width and thickness through rows, pull-ups, and cable exercises.",
-    duration: "50 Minutes"
+    duration: "50 Minutes",
+    link: "#"
   },
   {
     name: "Shoulder Power",
@@ -45,7 +50,8 @@ export const routines = [
     muscleGroup: "Shoulders",
     difficulty: "Intermediate",
     description: "Develop stronger deltoids with presses, raises, and rear delt exercises.",
-    duration: "55 Minutes"
+    duration: "55 Minutes",
+    link: "#"
   },
   {
     name: "Arm Growth",
@@ -53,7 +59,8 @@ export const routines = [
     muscleGroup: "Biceps and Triceps",
     difficulty: "Intermediate",
     description: "Dedicated arm training to improve size and definition.",
-    duration: "45 Minutes"
+    duration: "45 Minutes",
+    link: "#"
   },
   {
     name: "Upper Body Strength",
@@ -61,7 +68,8 @@ export const routines = [
     muscleGroup: "Upper Body",
     difficulty: "Advanced",
     description: "Heavy compound lifts designed to increase overall upper-body strength.",
-    duration: "70 Minutes"
+    duration: "70 Minutes",
+    link: "#"
   },
   {
     name: "Lower Body Strength",
@@ -69,7 +77,8 @@ export const routines = [
     muscleGroup: "Lower Body",
     difficulty: "Advanced",
     description: "Build powerful legs through squats, lunges, and deadlift variations.",
-    duration: "70 Minutes"
+    duration: "70 Minutes",
+    link: "#"
   },
   {
     name: "Squat Focus",
@@ -77,7 +86,8 @@ export const routines = [
     muscleGroup: "Legs",
     difficulty: "Advanced",
     description: "Specialized program to improve squat technique and strength.",
-    duration: "60 Minutes"
+    duration: "60 Minutes",
+    link: "#"
   },
   {
     name: "Deadlift Focus",
@@ -85,7 +95,8 @@ export const routines = [
     muscleGroup: "Posterior Chain",
     difficulty: "Advanced",
     description: "Increase deadlift performance through progressive overload training.",
-    duration: "60 Minutes"
+    duration: "60 Minutes",
+    link: "#"
   },
   {
     name: "Hypertrophy Program",
@@ -93,7 +104,8 @@ export const routines = [
     muscleGroup: "Full Body",
     difficulty: "Intermediate",
     description: "Designed to maximize muscle growth through higher training volume.",
-    duration: "90 Minutes"
+    duration: "90 Minutes",
+    link: "#"
   },
   {
     name: "Strength Builder",
@@ -101,7 +113,8 @@ export const routines = [
     muscleGroup: "Full Body",
     difficulty: "Advanced",
     description: "A structured strength-focused program based on compound lifts.",
-    duration: "90 Minutes"
+    duration: "90 Minutes",
+    link: "#"
   },
   {
     name: "Beginner Lifting",
@@ -109,7 +122,8 @@ export const routines = [
     muscleGroup: "Full Body",
     difficulty: "Beginner",
     description: "Learn proper lifting technique while building foundational strength.",
-    duration: "45 Minutes"
+    duration: "45 Minutes",
+    link: "#"
   },
   {
     name: "5-Day Bodybuilding Split",
@@ -117,6 +131,7 @@ export const routines = [
     muscleGroup: "Full Body",
     difficulty: "Advanced",
     description: "Classic bodybuilding split focused on muscle growth and symmetry.",
-    duration: "75 Minutes"
+    duration: "75 Minutes",
+    link: "#"
   }
 ];
