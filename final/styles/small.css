@@ -107,9 +107,11 @@ nav {
   background-color: var(--secondary-color);
 }
 
-/* Dynamic open state triggered via JavaScript .classList.toggle('show') */
+/**/
 .navigation.open {
-  display: flex !important; /* Forces layout rendering */
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .navigation li {
