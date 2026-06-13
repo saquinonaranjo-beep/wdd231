@@ -12,20 +12,24 @@ document.querySelector("#email").textContent =
 document.querySelector("#phone").textContent =
     params.get("phone");
 
-document.querySelector("#organization").textContent =
-    params.get("organization");
+document.querySelector("#membership").textContent =
+    params.get("membership");
 
 document.querySelector("#timestampDisplay").textContent =
     params.get("timestamp");
 
 
-const timestamp = document.querySelector("#timestamp");
+// Footer Date
+document.querySelector("#currentyear").textContent =
+    new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent =
+    `Last Modified: ${document.lastModified}`;
+
+
+// Mobile Menu
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector(".navigation");
-if (timestamp) {
-    timestamp.value = new Date().toISOString();
-}
-
 
 menuButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
