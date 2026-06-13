@@ -34,9 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(card);
         });
 
+        // Simple click listener with the "Coming Soon" fallback built-in
         container.addEventListener('click', (e) => {
             if (e.target.classList.contains('learn-more-btn')) {
-                window.open(e.target.dataset.link, '_blank');
+                const targetLink = e.target.dataset.link;
+                
+                if (!targetLink || targetLink === "" || targetLink === "undefined" || targetLink === "#") {
+                    alert("Routine details coming soon to Nemesis Gym Tepeyac!");
+                } else {
+                    window.open(targetLink, '_blank');
+                }
             }
         });
     }
@@ -93,10 +100,9 @@ if (timestamp) {
 
 if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
-        // Toggle 'open' to match your working homepage setup
         navigation.classList.toggle("open");
         
-        // Dynamically switch icon string
+        // Dynamically switch icon string between ☰ and ✖
         menuButton.textContent = navigation.classList.contains("open") ? "✖" : "☰";
     });
 }
