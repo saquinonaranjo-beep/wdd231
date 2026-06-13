@@ -1,141 +1,81 @@
-@media screen and (min-width: 768px) {
-    .home-main {
-        display: grid;
-        grid-template-columns: 1.5fr 2fr; 
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
+/* ==========================================================================
+   DESKTOP VIEW COMPONENT OVERRIDES
+   ========================================================================== */
+@media (min-width: 768px) {
 
-    
-    .home-main .events-box {
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+  /* 1. Header Array Reorganization */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+  }
 
-    .home-main .weather-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        gap: 1.5rem;
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+  header .logo {
+    padding: 1.25rem 0;
+  }
 
-    .home-main .spotlights-box {
-        grid-column: 1 / -1; 
-        margin-top: 1rem;
-    }
+  /* 2. Responsive Horizontal Menu Shift */
+  #menu-button {
+    display: none; /* Safely disables mobile hamburger block triggers */
+  }
 
+  nav {
+    background: none;
+  }
 
-    #spotlights-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
+  .navigation {
+    display: flex !important; /* Forces row visibility initialization */
+    flex-direction: row;
+    gap: 0.75rem;
+  }
 
-    
-    #menu-button {
-        display: none;
-    }
+  .navigation li a {
+    border-top: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+  }
 
-    .navigation {
-        display: flex;
-        gap: 2rem;
-        justify-content: flex-end;
-        margin-top: 1rem;
-    }
+  /* Wayfinding Alignment Adaptation */
+  .navigation li a.active {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+  }
 
-    .navigation li {
-        margin-bottom: 0;
-    }
+  /* 3. Landing Page Grid Reconstitution (index.html) */
+  .home-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-md);
+    align-items: stretch; /* Aligns all section boxes horizontally uniform */
+  }
 
+  .page-title {
+    grid-column: 1 / -1; /* Spans layout across all three desktop columns */
+    margin-bottom: 1.5rem;
+  }
 
-    .grid-view {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .events-box, .weather-box, .spotlights-box {
+    margin-bottom: 0; /* Clear mobile stacked bottom margin spacers */
+  }
 
-    .list-view .member-card {
-        flex-direction: row;
-        align-items: center;
-    }
+  /* 4. API Generated Routines Multi-Column Cards Configuration (classes.html) */
+  .places-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
 
-    .list-view .member-card img {
-        width: 250px;
-        height: 180px;
-        flex-shrink: 0;
-    }
+  /* 5. Dual Column Application Registration Grid Layout (membership.html) */
+  .join-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-        .join-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .membership-section {
-        position: sticky;
-        top: 1rem;
-    }
-
-
-
-    .places-container {
-        grid-template-columns: 1fr;
-        }
-
-    .place-card {
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        gap: 1rem;
-        align-items: start;
-    }
-
-    .place-card h2 {
-        grid-column: 1 / -1;
-    }
-
-    .place-card img:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-    .places-container {
-    grid-template-columns: 1fr 1fr;
-
-    grid-template-areas:
-        "card1 card2"
-        "card3 card4"
-        "card5 card6"
-        "card7 card8";
-    }
-
-}
-
-@media screen and (min-width: 1025px) {
-    .places-container {
-        grid-template-columns: repeat(4, 1fr);
-
-        grid-template-areas:
-            "card1 card2 card3 card4"
-            "card5 card6 card7 card8";
-    }
-
-    .place-card img:hover {
-        transform: scale(1.08);
-    }
-
+  .membership-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
