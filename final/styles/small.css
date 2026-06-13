@@ -45,13 +45,13 @@ img {
 }
 
 /* ==========================================================================
-   3. MOBILE HEADER & RESPONSIVE COLLAPSIBLE NAVIGATION
+   3. MOBILE HEADER & RESPONSIVE COLLAPSIBLE NAVIGATION (FIXED)
    ========================================================================== */
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
   position: relative;
-  z-index: 100;
+  z-index: 1000;
 }
 
 header .logo {
@@ -74,9 +74,13 @@ header .logo p, header .logo span {
   margin: 0;
 }
 
-/* Navigation System Layout */
+/* Navigation Container Bar */
 nav {
   background-color: var(--secondary-color);
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
 }
 
 #menu-button {
@@ -84,48 +88,57 @@ nav {
   border: none;
   color: var(--accent-color);
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
   width: 100%;
   text-align: right;
   display: block;
+  line-height: 1;
 }
 
-/* Collapsed mobile system state */
+/* Hidden state by default */
 .navigation {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none;
+  display: none; /* Keeps it completely hidden */
   flex-direction: column;
+  width: 100%;
+  background-color: var(--secondary-color);
 }
 
-/* JavaScript Trigger State via classList.toggle("show") */
+/* Dynamic open state triggered via JavaScript .classList.toggle('show') */
 .navigation.show {
-  display: flex;
+  display: flex !important; /* Forces layout rendering */
+}
+
+.navigation li {
+  width: 100%;
 }
 
 .navigation li a {
-  display: block;
-  color: var(--text-light);
+  display: block !important;
+  color: var(--text-light) !important;
   text-decoration: none;
   padding: 1rem;
   text-align: center;
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 1.1rem;
   border-top: 1px solid #222;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Interactive Hover States */
 .navigation li a:hover {
-  background-color: #1a1a1a;
-  color: var(--accent-color);
+  background-color: #111111;
+  color: var(--accent-color) !important;
 }
 
 /* Wayfinding Focus Rule (Active Page Highlight) */
 .navigation li a.active {
-  color: var(--secondary-color);
-  background-color: var(--accent-color);
+  color: var(--secondary-color) !important;
+  background-color: var(--accent-color) !important;
 }
 
 /* ==========================================================================
