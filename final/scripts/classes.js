@@ -2,16 +2,21 @@ import { routines } from '../data/routines.mjs';
 
 document.addEventListener("DOMContentLoaded", () => {
   
+    // === 1. NAVIGATION HAMBURGER TOGGLE (UPDATED WITH ICON AND "OPEN" CLASS) ===
     const menuButton = document.querySelector("#menu-button");
     const navigation = document.querySelector(".navigation");
     
     if (menuButton && navigation) {
         menuButton.addEventListener("click", () => {
-            navigation.classList.toggle("show"); // Fixed to match the CSS class!
+            // Toggles "open" to perfectly align with your updated CSS
+            navigation.classList.toggle("open"); 
+
+            // Swaps hamburger icon dynamically
+            menuButton.textContent = navigation.classList.contains("open") ? "✖" : "☰";
         });
     }
 
-
+    // === 2. DYNAMIC CONTENT GENERATION (classes.html) ===
     const container = document.getElementById('routines-container');
     if (container && routines) {
         routines.forEach((routine, index) => {
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-   
+    // === 3. LOCAL STORAGE VISIT COUNTER (classes.html) ===
     const visitMessageElement = document.getElementById('visit-message');
     if (visitMessageElement) {
         const lastVisit = localStorage.getItem('lastGymVisit');
@@ -84,19 +89,4 @@ document.addEventListener("DOMContentLoaded", () => {
     closeButtons.forEach(button => {
         button.addEventListener("click", () => {
             const modal = button.closest("dialog");
-            if (modal) modal.close();
-        });
-    });
-
-    const timestamp = document.querySelector("#timestamp");
-    if (timestamp) {
-        timestamp.value = new Date().toISOString();
-    }
-
-  
-    const currentYearEl = document.getElementById('currentyear');
-    const lastModEl = document.getElementById('lastModified');
-    
-    if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
-    if (lastModEl) lastModEl.textContent = `Last Modified: ${document.lastModified}`;
-});
+            if (modal)
