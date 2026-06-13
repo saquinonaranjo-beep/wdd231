@@ -4,19 +4,18 @@ const navigation = document.querySelector(".navigation");
 const yearSpan = document.querySelector("#currentyear");
 const lastModifiedSpan = document.querySelector("#lastModified");
 
-yearSpan.textContent = new Date().getFullYear();
+// Defensive check to avoid crashing if elements don't exist on a sub-page
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+if (lastModifiedSpan) lastModifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
 
-lastModifiedSpan.textContent =
-`Last Modified: ${document.lastModified}`;
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        // CHANGED FROM "open" TO "show" TO MATCH THE CSS
+        navigation.classList.toggle("show");
 
-menuButton.addEventListener("click", () => {
-navigation.classList.toggle("open");
-
-
-menuButton.textContent =
-    navigation.classList.contains("open")
-        ? "✖"
-        : "☰";
-
-
-});
+        menuButton.textContent =
+            navigation.classList.contains("show")
+                ? "✖"
+                : "☰";
+    });
+}

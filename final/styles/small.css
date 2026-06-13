@@ -108,7 +108,7 @@ nav {
 }
 
 /* Dynamic open state triggered via JavaScript .classList.toggle('show') */
-.navigation.show {
+.navigation.open {
   display: flex !important; /* Forces layout rendering */
 }
 
