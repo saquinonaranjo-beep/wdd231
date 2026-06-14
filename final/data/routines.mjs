@@ -1,7 +1,7 @@
 export const routines = [
   {
     name: "Push Day",
-    image: "./images/pushday.webp",
+    image: "images/pushday.webp",
     muscleGroup: "Chest, Shoulders, Triceps",
     difficulty: "Intermediate",
     description: "A workout focused on pressing movements to build upper body strength and muscle.",
@@ -10,7 +10,7 @@ export const routines = [
   },
   {
     name: "Pull Day",
-    image: "./images/pullday.webp",
+    image: "images/pullday.webp",
     muscleGroup: "Back and Biceps",
     difficulty: "Intermediate",
     description: "Develop pulling strength through rows, pull-downs, and bicep exercises.",
@@ -19,7 +19,7 @@ export const routines = [
   },
   {
     name: "Leg Day",
-    image: "./images/legday.webp",
+    image: "images/legday.webp",
     muscleGroup: "Quadriceps, Hamstrings, Glutes",
     difficulty: "Intermediate",
     description: "A complete lower-body workout centered around squats and compound movements.",
@@ -28,7 +28,7 @@ export const routines = [
   },
   {
     name: "Chest Builder",
-    image: "./images/chest.webp",
+    image: "images/chest.webp",
     muscleGroup: "Chest",
     difficulty: "Beginner",
     description: "Improve chest size and strength using presses, flyes, and isolation work.",
@@ -37,7 +37,7 @@ export const routines = [
   },
   {
     name: "Back Builder",
-    image: "./images/back.webp",
+    image: "images/back.webp",
     muscleGroup: "Back",
     difficulty: "Beginner",
     description: "Focus on width and thickness through rows, pull-ups, and cable exercises.",
@@ -46,7 +46,7 @@ export const routines = [
   },
   {
     name: "Shoulder Power",
-    image: "./images/shoulders.webp",
+    image: "images/shoulders.webp",
     muscleGroup: "Shoulders",
     difficulty: "Intermediate",
     description: "Develop stronger deltoids with presses, raises, and rear delt exercises.",
@@ -55,7 +55,7 @@ export const routines = [
   },
   {
     name: "Arm Growth",
-    image: "./images/arms.webp",
+    image: "images/arms.webp",
     muscleGroup: "Biceps and Triceps",
     difficulty: "Intermediate",
     description: "Dedicated arm training to improve size and definition.",
@@ -64,7 +64,7 @@ export const routines = [
   },
   {
     name: "Upper Body Strength",
-    image: "./images/upperbody.webp",
+    image: "images/upperbody.webp",
     muscleGroup: "Upper Body",
     difficulty: "Advanced",
     description: "Heavy compound lifts designed to increase overall upper-body strength.",
@@ -73,7 +73,7 @@ export const routines = [
   },
   {
     name: "Lower Body Strength",
-    image: "./images/lowerbody.webp",
+    image: "images/lowerbody.webp",
     muscleGroup: "Lower Body",
     difficulty: "Advanced",
     description: "Build powerful legs through squats, lunges, and deadlift variations.",
@@ -82,7 +82,7 @@ export const routines = [
   },
   {
     name: "Squat Focus",
-    image: "./images/squat.webp",
+    image: "images/squat.webp",
     muscleGroup: "Legs",
     difficulty: "Advanced",
     description: "Specialized program to improve squat technique and strength.",
@@ -91,7 +91,7 @@ export const routines = [
   },
   {
     name: "Deadlift Focus",
-    image: "./images/deadlift.webp",
+    image: "images/deadlift.webp",
     muscleGroup: "Posterior Chain",
     difficulty: "Advanced",
     description: "Increase deadlift performance through progressive overload training.",
@@ -100,7 +100,7 @@ export const routines = [
   },
   {
     name: "Hypertrophy Program",
-    image: "./images/hypertrophy.webp",
+    image: "images/hypertrophy.webp",
     muscleGroup: "Full Body",
     difficulty: "Intermediate",
     description: "Designed to maximize muscle growth through higher training volume.",
@@ -109,7 +109,7 @@ export const routines = [
   },
   {
     name: "Strength Builder",
-    image: "./images/strength.webp",
+    image: "images/strength.webp",
     muscleGroup: "Full Body",
     difficulty: "Advanced",
     description: "A structured strength-focused program based on compound lifts.",
@@ -118,7 +118,7 @@ export const routines = [
   },
   {
     name: "Beginner Lifting",
-    image: "./images/beginner.webp",
+    image: "images/beginner.webp",
     muscleGroup: "Full Body",
     difficulty: "Beginner",
     description: "Learn proper lifting technique while building foundational strength.",
@@ -127,7 +127,7 @@ export const routines = [
   },
   {
     name: "5-Day Bodybuilding Split",
-    image: "./images/bodybuilding.webp",
+    image: "images/bodybuilding.webp",
     muscleGroup: "Full Body",
     difficulty: "Advanced",
     description: "Classic bodybuilding split focused on muscle growth and symmetry.",
