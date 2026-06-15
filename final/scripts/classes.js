@@ -2,23 +2,26 @@ import { routines } from '../data/routines.mjs';
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // === 1. ROUTINE GENERATION (Async with Try...Catch) ===
+    // === 1. GENERAR LAS TARJETAS (Con async y try catch para la tarea) ===
     const container = document.getElementById('routines-container');
 
+    // Función asíncrona para cargar las rutinas
     async function loadGymRoutines() {
         try {
+            // Revisar si el contenedor de las tarjetas y los datos existen
             if (!container || !routines) {
-                throw new Error("Required data or container element is missing.");
+                throw new Error("No se encontraron los datos o el contenedor.");
             }
 
-            // Simulate API fetch delay
+            // Una pausa chiquita para simular que carga de internet
             await new Promise(resolve => setTimeout(resolve, 100));
 
-            // Render all 15 cards using template literals
+            // Recorrer el arreglo para ir armando cada tarjeta
             routines.forEach((routine, index) => {
                 const card = document.createElement('div');
                 card.className = `routine-card card-${index + 1}`;
 
+                // Insertar los datos en el HTML usando las comillas invertidas
                 card.innerHTML = `
                     <h2>${routine.name}</h2>
 
@@ -44,18 +47,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         } catch (error) {
-            console.error("Error loading gym routines:", error);
+            // Si algo falla, el catch atrapa el error y pone un mensaje en la consola
+            console.error("Error al mostrar las rutinas:", error);
             if (container) {
                 container.innerHTML = `<p class="error-msg">Sorry, routines could not be loaded at this time.</p>`;
             }
         }
     }
 
+    // Correr la función si el contenedor existe en la página
     if (container) {
         loadGymRoutines();
     }
 
-    // Button fallback handler
+    // Alerta por si le pican a un botón sin link completo
     if (container) {
         container.addEventListener('click', (e) => {
             if (e.target.classList.contains('learn-more-btn')) {
@@ -71,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // === 2. VISIT MESSAGE TRACKER (LocalStorage) ===
+    // === 2. MENSAJE DE VISITAS CON LOCALSTORAGE ===
     const visitMessageElement = document.getElementById('visit-message');
 
     if (visitMessageElement) {
@@ -83,14 +88,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Welcome to Nemesis Gym! Start exploring our workout routines.";
         } else {
             const timeDifference = now - parseInt(lastVisit);
-            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const daysDifference =
+                Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
             if (timeDifference < 1000 * 60 * 60 * 24) {
-                visitMessageElement.textContent = "Back already? Time for another workout!";
+                visitMessageElement.textContent =
+                    "Back already? Time for another workout!";
             } else if (daysDifference === 1) {
-                visitMessageElement.textContent = "Your last visit was 1 day ago.";
+                visitMessageElement.textContent =
+                    "Your last visit was 1 day ago.";
             } else {
-                visitMessageElement.textContent = `Your last visit was ${daysDifference} days ago.`;
+                visitMessageElement.textContent =
+                    `Your last visit was ${daysDifference} days ago.`;
             }
         }
 
@@ -98,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // === 3. FOOTER AUTO-UPDATES ===
+    // === 3. FECHAS AUTOMÁTICAS EN EL FOOTER ===
     const currentYearEl = document.getElementById('currentyear');
     const lastModifiedEl = document.getElementById('lastModified');
 
@@ -107,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// === 4. HAMBURGER MENU SYSTEM ===
+// === 4. MENÚ DE HAMBURGUESA PARA CELULARES ===
 const timestamp = document.querySelector("#timestamp");
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector(".navigation");
@@ -119,12 +128,13 @@ if (timestamp) {
 if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
         navigation.classList.toggle("open");
+        // Cambiar el icono entre la x y las tres líneas
         menuButton.textContent = navigation.classList.contains("open") ? "✖" : "☰";
     });
 }
 
 
-// === 5. DIALOG MODALS ===
+// === 5. VENTANAS MODALES (Etiqueta Dialog) ===
 const modalLinks = document.querySelectorAll("[data-modal]");
 
 modalLinks.forEach(link => {
@@ -134,7 +144,7 @@ modalLinks.forEach(link => {
         const modal = document.querySelector(`#${id}`);
 
         if (modal) {
-            modal.showModal();
+            modal.showModal(); // Abre el modal
         }
     });
 });
@@ -145,7 +155,7 @@ closeButtons.forEach(button => {
     button.addEventListener("click", () => {
         const modal = button.closest("dialog");
         if (modal) {
-            modal.close();
+            modal.close(); // Cierra el modal
         }
     });
 });
