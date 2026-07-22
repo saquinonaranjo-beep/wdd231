@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Némesis Gym Tepeyac | Únete</title>
+
+    <meta name="description"
+        content="¿Listo para comenzar? Déjanos tus datos y forma parte de Némesis Gym Tepeyac.">
+
+    <meta name="author" content="Sergio Aquino Naranjo">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width:768px)">
+
+    <script src="scripts/contacto.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="images/nemesislogo.webp" alt="Némesis Gym">
+    <p>Némesis Gym Tepeyac</p>
+</div>
+
+<nav>
+
+<button id="menu-button">☰</button>
+
+<ul class="navigation">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="instalaciones.html">Instalaciones</a></li>
+    <li><a href="contacto.html" class="active">Únete</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<main class="join-main">
+
+<h1>¡Comienza tu transformación hoy!</h1>
+
+<p style="text-align:center;max-width:800px;margin:auto;">
+Déjanos tus datos y nuestro equipo se pondrá en contacto contigo para brindarte
+toda la información sobre horarios, instalaciones y planes disponibles.
+</p>
+
+<div class="join-container">
+
+<section class="form-section">
+
+<form method="get" action="thankyou.html">
+
+<label>
+Nombre
+<input
+type="text"
+name="first"
+required
+autocomplete="given-name">
+</label>
+
+<label>
+Apellido
+<input
+type="text"
+name="last"
+required
+autocomplete="family-name">
+</label>
+
+<label>
+Objetivo de entrenamiento
+<input
+type="text"
+name="goal"
+placeholder="Ej. Ganar masa muscular">
+</label>
+
+<label>
+Correo electrónico
+<input
+type="email"
+name="email"
+required
+autocomplete="email"
+placeholder="correo@ejemplo.com">
+</label>
+
+<label>
+Teléfono
+<input
+type="tel"
+name="phone"
+required
+autocomplete="tel">
+</label>
+
+<label>
+¿Qué te interesa?
+
+<select name="membership">
+
+<option value="">Selecciona una opción</option>
+
+<option>Información general</option>
+
+<option>Conocer las instalaciones</option>
+
+<option>Planes y precios</option>
+
+<option>Entrenamiento personalizado</option>
+
+</select>
+
+</label>
+
+<label>
+
+Mensaje
+
+<textarea
+name="notes"
+placeholder="Escribe aquí tus dudas o comentarios..."></textarea>
+
+</label>
+
+<input
+type="hidden"
+name="timestamp"
+id="timestamp">
+
+<input
+type="submit"
+value="Solicitar información">
+
+</form>
+
+</section>
+
+<aside class="membership-section">
+
+<h2>¿Por qué elegir Némesis Gym?</h2>
+
+<div class="membership-card">
+
+<h3>💪 Equipo moderno</h3>
+
+<p>
+Entrena con máquinas y equipo diseñados para ofrecer un entrenamiento completo.
+</p>
+
+</div>
+
+<div class="membership-card">
+
+<h3>🏋️ Ambiente motivador</h3>
+
+<p>
+Un espacio pensado para personas que desean mejorar su condición física y mantenerse constantes.
+</p>
+
+</div>
+
+<div class="membership-card">
+
+<h3>🔥 Atención personalizada</h3>
+
+<p>
+Nuestro equipo está listo para ayudarte a resolver tus dudas y orientarte durante tu proceso.
+</p>
+
+</div>
+
+</aside>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-info">
+
+<p><strong>Némesis Gym Tepeyac</strong></p>
+
+<p>Ciudad de México</p>
+
+<p>¡Te esperamos para comenzar tu entrenamiento!</p>
+
+</div>
+
+<div class="footer-dev">
+
+<p>&copy; <span id="currentyear"></span> Némesis Gym Tepeyac</p>
+
+<p id="lastModified"></p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
