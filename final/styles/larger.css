@@ -22,24 +22,33 @@
 
   nav {
     background: none;
+    border: none;
   }
 
   .navigation {
     display: flex !important; /* Forces row visibility initialization */
     flex-direction: row;
     gap: 0.75rem;
+    background-color: transparent;
   }
 
   .navigation li a {
     border-top: none;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Interactive Hover States */
+  .navigation li a:hover {
+    background-color: #222222;
+    color: var(--accent-color) !important;
   }
 
   /* Wayfinding Alignment Adaptation */
   .navigation li a.active {
-    color: var(--secondary-color);
-    background-color: var(--accent-color);
+    color: var(--secondary-color) !important;
+    background-color: var(--accent-color) !important;
   }
 
   /* 3. Landing Page Grid Reconstitution (index.html) */
@@ -61,6 +70,7 @@
 
   /* 4. API Generated Routines Multi-Column Cards Configuration (classes.html) */
   .places-container {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
   }

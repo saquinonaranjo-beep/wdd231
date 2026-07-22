@@ -40,13 +40,13 @@
 <header>
 
     <div class="logo">
-        <img src="images/nemesislogo.webp" alt="Logo Némesis Gym">
+        <img src="images/nemesislogo.webp" alt="Logo Némesis Gym" width="50" height="50">
         <span>Némesis Gym Tepeyac</span>
     </div>
 
     <nav>
 
-        <button id="menu-button">☰</button>
+        <button id="menu-button" aria-label="Abrir o cerrar menú de navegación" aria-expanded="false">☰</button>
 
         <ul class="navigation">
             <li><a href="index.html" class="active">Inicio</a></li>
@@ -70,7 +70,7 @@
 
     <h1 class="page-title">Bienvenido a Némesis Gym Tepeyac</h1>
 
-    <section class="events-box">
+    <section class="about-box events-box">
 
         <h2>¿Por qué entrenar con nosotros?</h2>
 
@@ -82,7 +82,7 @@
 
     </section>
 
-    <section class="weather-box">
+    <section class="facilities-box weather-box">
 
         <h2>Nuestras áreas</h2>
 
@@ -103,7 +103,7 @@
 
     </section>
 
-    <section class="spotlights-box">
+    <section class="values-box spotlights-box">
 
         <h2>Comprometidos con tus resultados</h2>
 
@@ -116,6 +116,14 @@
 
         </div>
 
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <h3>🕒 Horarios de Atención</h3>
+
+        <p><strong>Lunes a Viernes:</strong> 6:00 AM – 10:00 PM</p>
+        <p><strong>Sábados:</strong> 8:00 AM – 4:00 PM</p>
+        <p><strong>Domingos:</strong> Cerrado</p>
+
     </section>
 
 </main>
@@ -126,15 +134,22 @@
 
         <p><strong>Némesis Gym Tepeyac</strong></p>
 
-        <p>Ciudad de México</p>
+        <p>📍 Ciudad de México</p>
 
-        <p>Consulta nuestras redes sociales para más información.</p>
+        <p>
+            💬 <a href="https://wa.me/525500000000?text=Hola,%20me%20gustaría%20pedir%20informes%20de%20sus%20membresías" 
+                  target="_blank" 
+                  rel="noopener" 
+                  style="color: var(--accent-color); font-weight: bold;">
+                  ¡Contáctanos por WhatsApp!
+               </a>
+        </p>
 
     </div>
 
     <div class="footer-dev">
 
-        <p>&copy; <span id="currentyear"></span> Némesis Gym Tepeyac</p>
+        <p>© <span id="currentyear"></span> Némesis Gym Tepeyac</p>
 
         <p id="lastModified"></p>
 

@@ -2,16 +2,15 @@
    1. DESIGN TOKENS & SYSTEM ROOT
    ========================================================================== */
 :root {
-  --primary-color: #111111;       /* Premium Dark Onyx */
+  --primary-color: #111111;       /* Dark Onyx */
   --secondary-color: #000000;     /* Jet Black */
-  --accent-color: #ccff00;        /* Bright Gym Equipment Yellow (Updated) */
+  --accent-color: #ccff00;        /* Electric Yellow */
   --text-light: #ffffff;
   --text-dark: #222222;
   --text-muted: #666666;
   --bg-light: #f4f4f6;
   --card-bg: #ffffff;
   --error-color: #ba1a1a;
-  
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Roboto', sans-serif;
   --gap-md: 1.5rem;
@@ -29,7 +28,8 @@ body {
   color: var(--text-dark);
   background-color: var(--bg-light);
   line-height: 1.6;
-  overflow-x: hidden; /* Strict protection against horizontal scrolling bugs */
+  margin: 0;
+  overflow-x: hidden; /* Protección contra scroll horizontal */
 }
 
 h1, h2, h3, h4 {
@@ -41,11 +41,11 @@ h1, h2, h3, h4 {
 
 img {
   max-width: 100%;
-  height: auto; /* Guarantees intrinsic web aspect-ratio alignment */
+  height: auto;
 }
 
 /* ==========================================================================
-   3. MOBILE HEADER & RESPONSIVE COLLAPSIBLE NAVIGATION (FIXED)
+   3. MOBILE HEADER & RESPONSIVE NAVIGATION
    ========================================================================== */
 header {
   background-color: var(--primary-color);
@@ -66,7 +66,8 @@ header .logo img {
   width: auto;
 }
 
-header .logo p, header .logo span {
+header .logo p, 
+header .logo span {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
@@ -74,7 +75,6 @@ header .logo p, header .logo span {
   margin: 0;
 }
 
-/* Navigation Container Bar */
 nav {
   background-color: var(--secondary-color);
   width: 100%;
@@ -96,12 +96,12 @@ nav {
   line-height: 1;
 }
 
-/* Hidden state by default */
+/* Menú colapsable móvil */
 .navigation {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none; /* Keeps it completely hidden */
+  display: none;
   flex-direction: column;
   width: 100%;
   background-color: var(--secondary-color);
@@ -130,23 +130,22 @@ nav {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Interactive Hover States */
 .navigation li a:hover {
   background-color: #111111;
   color: var(--accent-color) !important;
 }
 
-/* Wayfinding Focus Rule (Active Page Highlight) */
+/* Página activa en menú */
 .navigation li a.active {
   color: var(--secondary-color) !important;
   background-color: var(--accent-color) !important;
 }
 
 /* ==========================================================================
-   4. BRAND HERO SECTION ARCHITECTURE
+   4. HERO SECTION
    ========================================================================== */
 .Hero, .discover-hero {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/nemesislogo.webp') no-repeat center/contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)), url('../images/nemesislogo.webp') no-repeat center/contain;
   background-color: var(--secondary-color);
   color: var(--text-light);
   text-align: center;
@@ -155,7 +154,7 @@ nav {
 
 .Hero h2, .discover-hero h1 {
   color: var(--text-light);
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -166,21 +165,22 @@ nav {
   background-color: var(--accent-color);
   color: var(--secondary-color);
   text-decoration: none;
-  padding: 0.75rem 2rem;
-  font-weight: bold;
+  padding: 0.85rem 2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
   border-radius: 4px;
   text-transform: uppercase;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .Hero a:hover {
-  background-color: var(--text-light);
+  background-color: #ffffff;
   color: var(--secondary-color);
   transform: scale(1.05);
 }
 
 /* ==========================================================================
-   5. CONTAINER COMPONENTS & DEFAULT STACK LAYOUT
+   5. CONTENEDORES Y SECCIONES PRINCIPALES
    ========================================================================== */
 main {
   padding: var(--gap-md);
@@ -193,15 +193,17 @@ main {
   margin-bottom: 2rem;
 }
 
-.events-box, .weather-box, .spotlights-box, .discover-intro, .discover-content {
+.events-box, .weather-box, .spotlights-box, 
+.about-box, .facilities-box, .values-box,
+.discover-intro, .discover-content {
   background-color: var(--card-bg);
   padding: 1.5rem;
   margin-bottom: var(--gap-md);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 }
 
-.weather-box div p {
+.facilities-box div p, .weather-box div p {
   background-color: var(--bg-light);
   padding: 0.6rem 1rem;
   margin: 0.4rem 0;
@@ -210,13 +212,13 @@ main {
 }
 
 /* ==========================================================================
-   6. DYNAMIC RUNTIME JAVASCRIPT CARDS (classes.html)
+   6. CARDS & SECCIONES DINÁMICAS (TARJETAS / CLASES)
    ========================================================================== */
 #visit-message {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--accent-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
   text-align: center;
   padding: 1rem;
   border-radius: 4px;
@@ -233,7 +235,7 @@ main {
   background-color: var(--card-bg);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   border-bottom: 4px solid var(--primary-color);
   padding: 1.5rem;
   display: flex;
@@ -263,7 +265,7 @@ main {
 .routine-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Maintains structural frame aspect ratio */
+  object-fit: cover;
 }
 
 .routine-meta {
@@ -280,13 +282,13 @@ main {
 .routine-desc {
   font-size: 0.95rem;
   color: var(--text-muted);
-  flex-grow: 1; /* Aligns card buttons into an even grid line */
+  flex-grow: 1;
 }
 
 .learn-more-btn {
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
   padding: 0.75rem;
   font-weight: 700;
   font-family: var(--font-heading);
@@ -297,12 +299,12 @@ main {
 }
 
 .learn-more-btn:hover {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* ==========================================================================
-   7. MEMBERSHIP APPLICATION FORM (membership.html)
+   7. FORMULARIOS & MEMBRESÍAS
    ========================================================================== */
 .join-container {
   display: flex;
@@ -314,7 +316,7 @@ main {
   background-color: var(--card-bg);
   padding: 1.75rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 }
 
 .form-section form label {
@@ -357,9 +359,14 @@ main {
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
 }
 
-/* Sidebar layouts */
+.form-section form input[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
 .membership-section {
   display: flex;
   flex-direction: column;
@@ -377,7 +384,7 @@ main {
 .membership-card h3 {
   color: var(--secondary-color);
   background-color: var(--accent-color);
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 4px;
   font-size: 1.2rem;
 }
@@ -391,7 +398,7 @@ main {
 }
 
 /* ==========================================================================
-   8. FORM ACTION RESPONSE CARD (thankyou.html)
+   8. MODALES & MENSAJES DE AGRADECIMIENTO
    ========================================================================== */
 .thankyou-card {
   background-color: var(--card-bg);
@@ -399,7 +406,7 @@ main {
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   border-top: 5px solid var(--accent-color);
 }
 
@@ -414,13 +421,10 @@ main {
   border-bottom: 1px solid #f0f0f2;
 }
 
-/* ==========================================================================
-   9. ACCESSIBLE NATIVE DIALOG COMPONENT
-   ========================================================================== */
 dialog {
   border: none;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   padding: 2rem;
   max-width: 90%;
   width: 440px;
@@ -429,7 +433,7 @@ dialog {
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(3px); /* Smooth layout design integration */
+  backdrop-filter: blur(3px);
 }
 
 dialog h2 {
@@ -453,7 +457,7 @@ dialog h2 {
 }
 
 /* ==========================================================================
-   10. GLOBAL SYSTEM SITE FOOTER
+   9. FOOTER
    ========================================================================== */
 footer {
   background-color: var(--primary-color);
