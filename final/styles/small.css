@@ -4,7 +4,7 @@
 :root {
   --primary-color: #111111;       /* Premium Dark Onyx */
   --secondary-color: #000000;     /* Jet Black */
-  --accent-color: #d4af37;        /* Metallic Brand Gold */
+  --accent-color: #ccff00;        /* Bright Gym Equipment Yellow (Updated) */
   --text-light: #ffffff;
   --text-dark: #222222;
   --text-muted: #666666;
@@ -107,7 +107,6 @@ nav {
   background-color: var(--secondary-color);
 }
 
-/**/
 .navigation.open {
   display: flex !important;
   visibility: visible !important;
@@ -176,6 +175,7 @@ nav {
 
 .Hero a:hover {
   background-color: var(--text-light);
+  color: var(--secondary-color);
   transform: scale(1.05);
 }
 
@@ -375,8 +375,8 @@ main {
 }
 
 .membership-card h3 {
-  color: var(--accent-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
   padding: 0.4rem;
   border-radius: 4px;
   font-size: 1.2rem;
@@ -433,8 +433,8 @@ dialog::backdrop {
 }
 
 dialog h2 {
-  color: var(--accent-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
   margin: -2rem -2rem 1.5rem -2rem;
   padding: 1.25rem 2rem;
   text-align: center;
