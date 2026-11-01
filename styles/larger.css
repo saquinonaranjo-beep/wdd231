@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+
+    #menuButton {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+    }
+
+    .top-sections {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    #course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-container img {
+        width: 250px;
+        height: 300px;
+    }
+}
