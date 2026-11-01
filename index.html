@@ -28,19 +28,74 @@
     </nav>
 
     <main>
+
         <h1>Home</h1>
-        <section>
-            <h2>About Me</h2>
+
+        <div class="top-sections">
+
+
+            <section class="card">
+                <h2>About Me</h2>
+
+                <div class="card-content">
+                    <p>
+                        Welcome to my WDD 231 course home page.
+                        This page contains my assignments, projects,
+                        and course activities during the semester.
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="card">
+                <h2>Student Photo</h2>
+
+                <div class="photo-container">
+                    <img src="images/profile-sergio.jpg" alt="Sergio Aquino Naranjo Photo">
+                </div>
+            </section>
+
+        </div>
+
+
+        <section class="card course-section">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-buttons">
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
+            </div>
+
+            <div id="course-container"></div>
+
+            <p class="total-credits">
+                The total credits for courses listed above is
+                <span id="totalCredits"></span>
+            </p>
         </section>
-        <section>
-            <h2>Student Photo</h2>
-        </section>
-        <section>
-            <h2>Web Certifications Courses</h2>
-        </section>
+        <dialog id="course-details"></dialog>
+
     </main>
 
+
     <footer>
+
+        <div class="social">
+            <a href="https://github.com/saquinonaranjo-beep" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sergio-aquino-naranjo-97b909342" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/share/1EWjFDSqzx/" target="_blank">Facebook</a>
+        </div>
+
+        <div class="footer-info">
+            <p>
+                &copy; <span id="currentyear"></span>
+                Sergio Aquino Naranjo | Mexico City, Mexico
+            </p>
+
+            <p id="lastModified"></p>
+        </div>
+
     </footer>
 </body>
 </html>
