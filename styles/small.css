@@ -77,7 +77,7 @@ nav a:hover {
     background: #444;
 }
 
-nav a.active {
+nav a[aria-current="page"] {
     background: #555;
 }
 
