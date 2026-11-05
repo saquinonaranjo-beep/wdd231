@@ -1,13 +1,20 @@
 const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json';
 const cards = document.querySelector('#cards');
 
+
 async function getProphetData() {
-  const response = await fetch(url);
-  const data = await response.json();
-  
-  displayProphets(data.prophets);
-  
-  
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    displayProphets(data.prophets);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 
@@ -33,7 +40,7 @@ const displayProphets = (prophets) => {
     card.appendChild(birthDate);
     card.appendChild(birthPlace);
     card.appendChild(portrait);
-    
+
     cards.appendChild(card);
   });
 };
