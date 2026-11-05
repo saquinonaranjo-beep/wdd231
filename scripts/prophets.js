@@ -10,4 +10,4 @@ async function getProphetData() {
   
 }
 
-displayProphets();
+getProphetData();
