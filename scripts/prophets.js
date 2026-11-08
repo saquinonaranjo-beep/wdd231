@@ -7,7 +7,7 @@ async function getProphetData() {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error(`Request failed with status ${response.status}`);
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const data = await response.json();
@@ -16,7 +16,6 @@ async function getProphetData() {
     console.error(error);
   }
 }
-
 
 
 const displayProphets = (prophets) => {

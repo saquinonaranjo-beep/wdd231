@@ -1,0 +1,141 @@
+@media screen and (min-width: 768px) {
+    .home-main {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr; 
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    
+    .home-main .events-box {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .home-main .weather-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .home-main .spotlights-box {
+        grid-column: 1 / -1; 
+        margin-top: 1rem;
+    }
+
+
+    #spotlights-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    
+    #menu-button {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    .navigation li {
+        margin-bottom: 0;
+    }
+
+
+    .grid-view {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .list-view .member-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .list-view .member-card img {
+        width: 250px;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .join-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .membership-section {
+        position: sticky;
+        top: 1rem;
+    }
+
+
+
+    .places-container {
+        grid-template-columns: 1fr;
+        }
+
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .place-card h2 {
+        grid-column: 1 / -1;
+    }
+
+    .place-card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+    .places-container {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    .places-container {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    .place-card img:hover {
+        transform: scale(1.08);
+    }
+
+}
