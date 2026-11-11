@@ -12,7 +12,7 @@ const myLon = "6.64";
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
 
 
-async function apiFetch(url) {
+async function apiFetch() {
   try {
     const response = await fetch(url);
     if (response.ok) {
