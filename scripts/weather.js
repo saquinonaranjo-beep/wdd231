@@ -18,7 +18,7 @@ async function apiFetch() {
     if (response.ok) {
       const data = await response.json();
       console.log(data); // testing only
-      // displayResults(data); // uncomment when ready
+      displayResults(data);
     } else {
       throw new Error(await response.text());
     }
@@ -26,5 +26,15 @@ async function apiFetch() {
     console.error(error);
   }
 }
-
+function displayResults(data) {
+  currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+  const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  const desc = data.weather[0].description;
+  weatherIcon.setAttribute('src', iconsrc);
+  weatherIcon.setAttribute('alt', desc);
+  captionDesc.textContent = desc;
+}
 apiFetch();
+
+
+
