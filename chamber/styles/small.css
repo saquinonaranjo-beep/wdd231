@@ -1,5 +1,6 @@
+
 .Hero {
-    background: linear-gradient(rgba(0, 48, 73, 0.7), rgba(0, 48, 73, 0.7)), 
+    background: linear-gradient(rgba(0, 48, 73, 0.7), rgba(0, 48, 73, 0.7)),
                 url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200') no-repeat center center/cover;
     min-height: 300px;
     display: flex;
@@ -108,7 +109,8 @@ header {
     color: #fcbf49;
 }
 
-.active {
+/* Wayfinding - Highlight the current page */
+.navigation a.active {
     color: #fcbf49;
     text-decoration: underline;
 }
@@ -308,10 +310,9 @@ footer {
     background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     opacity: 0;
-
     animation: fadeUp 2s ease forwards;
 }
 
@@ -347,8 +348,8 @@ footer {
 .membership-card a:hover {
     text-decoration: underline;
 }
-@keyframes fadeUp {
 
+@keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateX(-150px);
@@ -358,7 +359,6 @@ footer {
         opacity: 1;
         transform: translateX(0);
     }
-
 }
 
 dialog {
@@ -369,7 +369,7 @@ dialog {
 }
 
 dialog::backdrop {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .close-modal {
@@ -392,9 +392,8 @@ dialog::backdrop {
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 
+    box-shadow: 0 2px;
 }
-
 
 /* Discover Page */
 
@@ -402,7 +401,7 @@ dialog::backdrop {
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .place-card h2 {
