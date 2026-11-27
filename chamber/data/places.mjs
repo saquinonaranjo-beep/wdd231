@@ -1,4 +1,4 @@
-// src/data/placesData.mjs
+// src/data/places.mjs
 export const places = [
   {
     "name": "Aquarium del Puerto de Veracruz",
